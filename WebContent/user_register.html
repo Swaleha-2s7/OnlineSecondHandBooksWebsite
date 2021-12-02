@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>  
+      
+body {
+    margin: 0;
+  }
+/*First Menu Bar*/
+.topnav {
+    list-style-type: none;
+    margin-top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: repeating-linear-gradient(rgb(224, 224, 224),white);
+    width: 100%;
+    top:0;
+  }
+  
+  .topnav a {
+    float: left;
+  }
+  
+  .topnav a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .topnav a:hover {
+    background-color: rgb(229, 229, 230);
+  }
+  .topnav input[type=text]{
+    float:left;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 6px;
+    margin-left: 10px;
+    border: none;
+    font-size: 17px;
+  }
+  @media screen and (max-width: 600px){
+    .topnav a, .topnav input[type=text]{
+      float:none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }  
+    .topnav input[type=text]{
+      border: 1px solid #ccc;
+    }
+    .topnav button[type=submit]{
+      float:none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+  }
+  .topnav button[type=submit]{
+    float: left;
+    padding: 5px;
+    margin-top: 8px;
+    margin-right: 10px;
+    width: 30px;
+    background: #2196f3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  .topnav button:hover{
+    background: #0b7dda;
+  }
+  /*Second Menu Bar*/
+  .navbar {
+    overflow: hidden;
+    background-image: linear-gradient(rgb(29, 28, 28),rgb(109, 107, 107));
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(70, 68, 68);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content .header {
+    background-image: linear-gradient(rgb(85, 84, 84),rgb(170, 165, 165));
+    padding: 16px;
+    color: white;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Create six equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 16%;
+    padding: 4px;
+    background-image: linear-gradient(white,rgb(238, 234, 234));
+    height: 250px;
+    border-left: 1px dotted black;
+  }
+  
+  .column a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .column a:hover {
+    background-color: rgb(227, 216, 228);
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+      
+      .class for-text{
+     margin-right: 10px 0;
+     padding-right:8px;
+     max-height : 20px;
+     line-height: 15pt;
+     max-width:100%;
+     font-size: 20pt;
+     box-sizing: border-box;
+     font-size: 25pt;
+     outline: none;
+     border-radius: 4px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      .main{
+        margin-top: 10px;
+     }
+     .input[type=text]{
+       width: 100px;
+     }
+     
+     
+     .panel
+     {
+     background-color:#663399;
+     height:100px;
+     }
+     .main
+     {align-items: center;
+     background-image: url(register.jpg);
+     width: 900px;
+     height: 600px;}
+      .myform{
+     margin-left: 55px;
+     margin-top: 1%;
+     margin-right: 75%;
+     margin-bottom: 10px;
+     background-color: dimgray;
+     width: 300px;
+         
+      }
+       .class for-label{
+     margin-right: 10px;
+     padding-right: 100px;
+      }
+      .container{
+        margin-left: 30px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+          
+  </style>
+  <script language="javascript" type="text/javascript">
+  letters=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+  digits=['0','1','2','3','4','5','6','7','8','9']
+
+  function isUpperCaseAt(str, index) {
+    return str.charAt(index).toUpperCase() === str.charAt(index);
+  }
+
+  function validatePass(pwd){
+    with(document.forms.register){
+      if(pwd != "") {
+      if(pwd.length < 8) {
+        alert("Error: Password must contain at least 8 characters!");
+        password.focus();
+        return false;
+      }
+      re = /[0-9]/;
+      if(!re.test(pwd)) {
+        alert("Error: password must contain at least one number (0-9)!");
+        password.focus();
+        return false;
+      }
+      re = /[a-z]/;
+      if(!re.test(pwd)) {
+        alert("Error: password must contain at least one lowercase letter (a-z)!");
+        password.focus();
+        return false;
+      }
+      re = /[A-Z]/;
+      if(!re.test(pwd)) {
+        alert("Error: password must contain at least one uppercase letter (A-Z)!");
+        password.focus();
+        return false;
+      }
+    }
+  }
+}
+  function confirmPass(pwd){
+    with(document.forms.register){
+      if(document.getElementById("password").value!=pwd){
+        alert("Re-enter the password")
+        document.getElementById("password").value="";
+        document.getElementById("password_confirm").value="";
+      }
+    }
+  }
+
+  function checkPhone(mobile){
+    for(i=0;i<letters.length;i++){
+      for(index=0;index<mobile.length;index++){
+        if(mobile[index]==letters[i]||mobile[index]==letters[i].toUpperCase()){
+          alert('Mobile number must contain digits only...')
+          document.getElementById('phone').value=""
+          return;
+        }
+      }
+    }
+    if(mobile.length>9){
+      alert('Mobile must be 10 digit only')
+      return
+    }
+  }
+
+  function validateEmail(mail){
+    flag=0;
+    if(mail.indexOf('@')==-1 || mail.indexOf('.')==-1){
+      alert('Email Id must contain @ and . symbol')
+    }
+    for(index=0;index<mail.length;index++){
+      for(i=0;i<digits.length;i++){
+        if(mail[index]==digits[i]){
+          flag+=1
+        }
+      }
+    }
+    if(flag==0){
+      alert('Email must contain at least one digit...')
+    }
+  }
+  </script>
+  </head>
+  <body>
+<!--First Menu Bar-->
+<div class="topnav" id="home">
+    <a style="margin-left: 30%;">Icon</a>
+    <input type="text" placeholder="Search..." name="search"/> 
+    <button type="submit"><i class="fa fa-search"></i></button>
+    <a href="#profile"><i class="fa fa-user"></i></a>
+</div>
+  <!--Second Menu Bar-->
+<div class="navbar">
+  <a href="index.jsp" style="margin-left: 27%;">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Books 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Diploma Books Categories</h2>
+      </div>   
+      <div class="row">
+        <div class="column">
+          <h4>Computer Engineering</h4>
+          <a href="co.jsp">FY CO</a>
+          <a href="co.jsp">SY CO</a>
+          <a href="co.jsp">TY CO</a>
+        </div>
+        <div class="column">
+          <h4>Mechanical Engineering</h4>
+          <a href="me.jsp">FY ME</a>
+          <a href="me.jsp">SY ME</a>
+          <a href="me.jsp">TY ME</a>
+        </div>
+        <div class="column">
+          <h4>Civil Engineering</h4>
+          <a href="ce.jsp">FY CE</a>
+          <a href="ce.jsp">SY CE</a>
+          <a href="ce.jsp">TY CE</a>
+        </div>
+        <div class="column">
+          <h4>Electrical Engineering</h4>
+          <a href="ee.jsp">FY EE</a>
+          <a href="ee.jsp">SY EE</a>
+          <a href="ee.jsp">TY EE</a>
+        </div>
+        <div class="column">
+          <h4>ENTC Engineering</h4>
+          <a href="entc.jsp">FY EJ</a>
+          <a href="entc.jsp">SY EJ</a>
+          <a href="entc.jsp">TY EJ</a>
+        </div>
+        <div class="column">
+          <h4>Instrumentation Engineering</h4>
+          <a href="is.jsp">FY IS</a>
+          <a href="is.jsp">SY IS</a>
+          <a href="is.jsp">TY IS</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <a href="seller_final.jsp">Sell</a>
+  <a href="exchange.jsp">Exchange</a>
+  <a href="paper.html">Paper</a>
+  <a href="COebook.html">E-Book</a>
+</div>
+<div class="header">     
+  <div class="container">
+      <div class="logo">
+       
+  </div>	
+</div >
+ 
+<div class="navigation">
+    <div class="container">
+      <div class="navigation-flex">
+      <nav class="navbar ">
+
+
+</nav>
+      </div>
+    </div>         
+</div>
+
+<div class="content" >
+
+
+
+
+<div class="container">
+  
+      <br>
+                 <h1>Register Yourself</h1>
+                 <br><h3 style="color: cornflowerblue">Please fill in the form below to register.</h3>
+             
+            
+  
+      <br>        
+
+<form name="register" method="post" action="register.jsp">
+<table style="padding: 10px">
+
+                     
+                          <tr ><td><i class="fa fa-dot-circle"></i><label for="email" class="for-label" style="font-size: 25px;">Email Address *</label></td></tr><tr><td>
+                           
+                          <input type="text" class="for-text" id="email" onblur="validateEmail(this.value)" required style=" height:50px; border-radius: 10px;font-size: 20px;border-style:ridge" name="email" size="140" value="" required autofocus><br></td></tr>
+                          <tr><td></td></tr><tr><td></td></tr>
+                          <tr><td></td></tr><tr><td></td></tr><tr><td></td></tr>
+                          <tr ><td><label for="email" class="for-label" style="font-size: 25px">Name *</label></td></tr><tr><td>
+                             
+                            <input id="name" type="text" class="for-text"  size="140" required style=" height:50px; border-radius: 10px;font-size: 20px;border-style:ridge"  name="name" value="" placeholder="Name" required ></td></tr>
+                      
+                            <tr><td></td></tr>
+                            <tr><td></td></tr><tr><td></td></tr><tr><td></td></tr>
+                            <tr><td></td></tr>
+                      
+                             <tr ><td> <label for="address" class="for-label" style="font-size: 25px">Password *</label></td></tr><tr><td>
+                               
+                              <input id="password" type="password" onchange="validatePass(this.value)" size="140" class="for-text" style=" height:50px; border-radius: 10px;font-size: 20px;border-style:ridge"  name="password"  placeholder="Password" required></td></tr>
+                              <tr><td></td></tr><tr><td></td></tr><tr><td></td></tr>
+                              <tr><td></td></tr><tr><td></td></tr>
+                        <tr ><td>  <label for="address" class="for-label" style="font-size: 25px">Confirm Password *</label></td></tr><tr><td>
+                           
+                          <input id="password_confirm" type="password" size="140" class="for-text" required style=" height:50px; border-radius: 10px;font-size: 20px;border-style:ridge"  name="password_confirmation" placeholder="Confirm Password"
+                          required onblur="confirmPass(this.value)"></td></tr>
+                          
+                          <tr><td></td></tr><tr><td></td></tr><tr><td></td></tr>
+                          <tr><td></td></tr><tr><td></td></tr>
+                              <tr ><td><label for="address" class="for-label" style="font-size: 25px">Address</label></td></tr><tr><td>
+                                 
+                                <input type="text" class="for-text" size="140" id="address" style=" height:50px; border-radius: 10px;font-size: 20px;border-style:ridge"  name="address" value="" required></td></tr>
+                              
+                            <tr><td></td></tr><tr><td></td></tr><tr><td></td></tr>
+                            <tr><td></td></tr><tr><td></td></tr>
+                          
+                                  <tr ><td><label for="city" class="for-label" style="font-size: 25px">Pin-Code</label></td></tr><tr><td>
+                                     
+                                    <input type="text" class="for-text" size="140" id="pincode" style=" height:50px; border-radius: 10px;font-size: 20px;border-style:ridge"  name="pincode" value="" required></td></tr>
+                                    <tr><td></td></tr><tr><td></td></tr><tr><td></td></tr>
+                                    <tr><td></td></tr><tr><td></td></tr>
+                                  <tr ><td> <label for="province" class="for-label" style="font-size: 25px">State</label></td></tr><tr><td>
+                                     
+                                    <input type="text" class="for-text" size="140" style=" height:50px; border-radius: 10px;font-size: 20px;border-style:ridge"  id="state" name="state" value="" required></td></tr>
+                                  
+                                    <tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr>
+                                    <tr><td></td></tr>
+                          
+                                  <tr ><td><label for="postalcode" class="for-label" style="font-size: 25px">Postal Code</label></td></tr><tr><td>
+                                     
+                                    <input type="text" class="for-text" size="140" style=" height:50px; border-radius: 10px;font-size: 20px;border-style:ridge"  id="postalcode" name="postalcode" value="" required></td></tr>
+                                    <tr><td></td></tr><tr><td></td></tr><tr><td></td></tr>
+                                    <tr><td></td></tr><tr><td></td></tr>
+                                  <tr ><td><label for="phone" class="for-label" style="font-size: 25px">Phone *</label></td></tr><tr><td>
+                                     
+                                    <input type="text" class="for-text" id="Sphone" required style="height:50px; border-radius: 10px;font-size: 20px;border-style:ridge" value="+91"  size="7" name="Sphone" value="" required><input type="text" class="for-text" id="phone" onkeypress="checkPhone(this.value)" style=" height:50px; border-radius: 10px;font-size: 20px;border-style:ridge"  size="129" name="phone" value="" required></td></tr>
+                                    <tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr>
+                                    <tr><td></td></tr>
+      </table>
+                      <br>
+                      <h3 style="color:darkslategrey">* indicates the required field. </h3><br>
+                          <button type="submit" class="btn btn-primary" style="border-style: hidden;border-radius:5px;width:100px;height:50px;color:white;background-color: black;font-size:20px">Register</button>
+             </form>
+                       <br><br>           
+      </div> 
+      </div>
+      </div>
+  </body>
+</html>

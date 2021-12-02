@@ -1,0 +1,119 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font: bold 24px Arial, sans-serif;
+}
+
+html {
+	height: 100%;
+	background: white;
+	background-image: linear-gradient(rgb(194, 189, 189),rgb(138, 136, 136));
+	background-size: cover;
+}
+
+#calculator {
+	width: 430px;
+	height: auto;
+	margin: 50px auto;
+	padding: 20px 20px 9px;
+	background: #9dd2ea;
+	background: linear-gradient(#9dd2ea, #8bceec);
+	border-radius: 3px;
+	box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+/* Top portion */
+.top button.clear {
+	float: left;
+}
+/* Inset shadow on the screen to create indent */
+.top .screen {
+	height: 80px;
+	width: 290px;
+	float: right;
+	padding: 0 20px;
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+	margin-right: 5px;
+	/* Typed Numbers*/
+	font-size: 24px;
+	line-height: 40px;
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-align: right;
+	letter-spacing: 1px;
+}
+
+/* Clear floats */
+.keys, .top {overflow: hidden;}
+
+/* Applying same to the keys */
+.keys button, .top button.clear {
+	float: left;
+	position: relative;
+	top: 0;
+	cursor: pointer;
+	width: 80px;
+	height: 80px;
+	background: white;
+	border-radius: 3px;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+	font-size: 24px;
+	margin: 0 10px 16px 4px;
+	color: #888;
+	line-height: 70px;
+	text-align: center;
+	user-select: none;
+	/*transition: all 0.2s ease;*/
+}
+
+.keys button.operator {
+	background: #FFF0F5;
+	margin-right: 0;
+}
+
+.keys button.eval {
+	background: #f0ff8b;
+	box-shadow: 0px 4px #bac768;
+	color: #888e5f;
+}
+
+.top button.clear {
+	background: #f85364;
+	box-shadow: 0px 4px #f55f6b;
+	color: white;
+}
+
+/* hover effects of keys*/
+.keys button:hover {
+	background: #42c048;
+	box-shadow: 0px 4px #3cdd2d;
+	color: white;
+}
+
+.keys button.eval:hover {
+	background: #23d12c;
+	box-shadow: 0px 4px #497a33;
+	color: #ffffff;
+}
+
+.top button.clear:hover {
+	background: #f0313d;
+	box-shadow: 0px 4px #e6616a;
+	color: white;
+}
+.keys button:active {
+	box-shadow: 0px 0px #6b54d3;
+	top: 4px;
+}
+
+.keys button.eval:active {
+	box-shadow: 0px 0px #717a33;
+	top: 4px;
+}
+
+.top button.clear:active {
+	top: 4px;
+	box-shadow: 0px 0px #d3545d;
+}

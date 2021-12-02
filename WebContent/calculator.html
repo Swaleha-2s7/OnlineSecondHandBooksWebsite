@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<link rel="stylesheet" type="text/css" href="calculatorStyle.css">
+</head>
+<body>
+	<div id="calculator">
+        <!-- display screen and clear key -->
+        <div class="top">
+            <button class="clear">C</button>
+            <div class="screen" style="width: 290px;"></div>
+        </div>
+        <div class="keys">
+            <!-- operators and number keys -->
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="operator">+</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="operator">-</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="operator">/</button>
+            <button>.</button>
+            <button>0</button>
+            <button class="eval">=</button>
+            <button class="operator">x</button>
+        </div>
+    </div>
+    <script>
+        // Get all the keys from document
+        var keys = document.querySelectorAll('#calculator button');
+        var operators = ['+', '-', 'x', '/'];
+        var decimalAdded = false;
+        // Add onclick event to all the keys and perform operations
+        for(var i = 0; i < keys.length; i++) {
+            keys[i].onclick = function(e) {
+                var input = document.querySelector('.screen');
+                var inputVal = input.innerHTML;
+                var btnVal = this.innerHTML;
+                if(btnVal == 'C') {
+                    input.innerHTML = '';
+                    decimalAdded = false;
+                }
+                else if(btnVal == '=') {
+                    var equation = inputVal;
+                    var lastChar = equation[equation.length - 1];
+                    equation = equation.replace(/x/g, '*') //replace the 'x'-'*'
+                    if(operators.indexOf(lastChar) > -1 || lastChar == '.')
+                        equation = equation.replace(/.$/, '');
+                    
+                    if(equation)
+                        input.innerHTML = eval(equation);
+                        
+                    decimalAdded = false;
+                }
+                else if(operators.indexOf(btnVal) > -1) {
+                   var lastChar = inputVal[inputVal.length - 1];
+                    if(inputVal != '' && operators.indexOf(lastChar) == -1) //If the screen is empty then 
+                        input.innerHTML += btnVal; //input value = button pressed value
+                    else if(inputVal == '' && btnVal == '-') //check that user entered value is negative then
+                        input.innerHTML += btnVal; //add the negative sign first to the input
+                    if(operators.indexOf(lastChar) > -1 && inputVal.length > 1) {
+                        input.innerHTML = inputVal.replace(/.$/, btnVal);
+                    }
+                    decimalAdded =false;
+                }
+                else if(btnVal == '.') { //Check the decimal values are entered or not
+                    if(!decimalAdded) {
+                        input.innerHTML += btnVal;
+                        decimalAdded = true;
+                    }
+                }
+                else { //Add the button value as it is
+                    input.innerHTML += btnVal;
+                }
+                e.preventDefault();
+            } 
+        }
+        </script>
+</body>
+</html>

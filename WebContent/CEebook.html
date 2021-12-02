@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="PDFpageStyle.css">
+</head>
+<body>
+<!--Side Menu Bar-->
+<div class="sidenav">
+    <input type="text" placeholder="Search..." name="search"/> 
+    <button type="submit"><i class="fa fa-search"></i></button>
+    <br><br><br>
+  <a href="index.jsp">Home</a>
+  <button class="dropdown-btn">Branch 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="COebook.html">Computer Engineering</a>
+    <a href="MEebook.html">Mechanical Engineering</a>
+    <a href="CEebook.html">Civil Engineering</a>
+    <a href="EEebook.html">Electrical Engineering</a>
+    <a href="EJebook.html">ENTC Engineering</a>
+    <a href="ISebook.html">Instrumentation Engineering</a>
+  </div>
+</div>
+<!--Actual Content-->
+<div class="main">
+<h1>Civil Engineering</h1> 
+    <div class="paper-row">
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="material.jpg" alt="CEW" style="width:100%;max-height: 150px;">
+                <h4>Materials for Civil and Construction Engineeres </h4>
+                <p class="author">- Michael S. Mamlouk</p>
+                <p><button><a href="https://www.academia.edu/36019764/MATERIALS_FOR_CIVIL_AND_CONSTRUCTION_ENGINEERS_3_rd_Edition" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+      
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="highway.jpg" alt="HEN" style="width:100%;max-height: 190px;">
+                <h4>Highway Engineering</h4>
+                <p class="author">- Khanna S.K</p>
+                <p><button><a href="https://www.academia.edu/39084803/Highway_Engineering_Khanna_and_Justo" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="risk.jpg" alt="BCO" style="width:100%;max-height: 190px;">
+                <h4>Managing Risk in Construction Projects</h4>
+                <p class="author">- Nigel J Smith</p>
+                <p><button><a href="https://download.e-bookshelf.de/download/0004/9880/36/L-G-0004988036-0002652249.pdf" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="estimation.jpg" alt="EAC" style="width:100%;max-height: 190px;">
+                <h4>Estimating and Costing</h4>
+                <p class="author">- Dutta B.N</p>
+                <p><button><a href="https://drive.google.com/file/d/0B-1pQnD2tCRIOWtWTURWRjR2WHM/view" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+        
+    </div>  
+    
+    </div>
+
+</div>
+
+<script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
+    </script>
+</body>
+</html> 

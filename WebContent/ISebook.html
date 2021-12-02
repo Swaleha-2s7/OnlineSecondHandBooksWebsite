@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="PDFpageStyle.css">
+</head>
+<body>
+<!--Side Menu Bar-->
+<div class="sidenav">
+    <input type="text" placeholder="Search..." name="search"/> 
+    <button type="submit"><i class="fa fa-search"></i></button>
+    <br><br><br>
+  <a href="index.jsp">Home</a>
+  <button class="dropdown-btn">Branch 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="COebook.html">Computer Engineering</a>
+    <a href="MEebook.html">Mechanical Engineering</a>
+    <a href="CEebook.html">Civil Engineering</a>
+    <a href="EEebook.html">Electrical Engineering</a>
+    <a href="EJebook.html">ENTC Engineering</a>
+    <a href="ISebook.html">Instrumentation Engineering</a>
+  </div>
+</div>
+<!--Actual Content-->
+<div class="main">
+<h1>Instrumentation Engineering</h1> 
+    <div class="paper-row">
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="electronicprinciple.jpg" alt="BEL" style="width:100%;max-height: 200px;">
+                <h4>Electronics Principles</h4>
+                <p class="author">- Albert Paul, David</p>
+                <p><button><a href="https://books.google.co.in/books?id=DRYflafnaaQC&lpg=PP1&dq=Electronics%20Principles%20by%20Albert%20Paul%2C%20David&pg=PP1#v=onepage&q&f=true" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+      
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="dataComm.jpg" alt="IDC" style="width:100%;max-height: 190px;">
+                <h4>Data Communication and Networking</h4>
+                <p class="author">- Forouzan</p>
+                <p><button><a href="https://www.academia.edu/31758087/FIFTH_EDITION_Data_Communications_AND_Networking" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="principlesIndus.jpg" alt="IDT" style="width:100%;max-height: 190px;">
+                <h4>Principles of Industrial Instrumentation</h4>
+                <p class="author">- Partanabis D</p>
+                <p><button><a href="https://books.google.co.in/books?id=iBJTasx17dAC&lpg=PR3&dq=Principles%20of%20Industrial%20Instrumentation%20by%20Partanabis%20D&pg=PP1#v=onepage&q&f=true" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="instruanalysis.jpg" alt="AIS" style="width:100%;max-height: 190px;">
+                <h4>Introduction to Instrumental Analysis</h4>
+                <p class="author">- Braun Robert D.</p>
+                <p><button><a href="https://fadirucig.files.wordpress.com/2014/09/introduction-to-instrumental-analysis.pdf" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="indusInstru.jpg" alt="DCS" style="width:100%;max-height: 190px;">
+                <h4>Industrial Instrumentation and Control</h4>
+                <p class="author">- Singh S.K</p>
+                <p><button><a href="https://books.google.co.in/books?id=50mqORNmBJgC&lpg=PP1&dq=Industrial%20Instrumentation%20and%20Control%20by%20Singh%20S.K&pg=PP1#v=onepage&q&f=true" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+  </div>
+</div>
+
+<script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
+    </script>
+</body>
+</html> 

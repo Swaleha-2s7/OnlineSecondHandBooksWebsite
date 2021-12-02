@@ -1,0 +1,163 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+.fa{
+    font-size: large;
+}
+/*Side Menu Bar*/
+.sidenav {
+  height: 100%;
+  width: 280px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(#111,rgb(87, 86, 86));
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 24px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+  background-color: rgb(144, 144, 144);
+}
+
+/* Main content */
+.main {
+  margin-left: 280px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: rgb(72, 211, 30);
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.sidenav input[type=text]{
+    float:left;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 6px;
+    margin-left: 10px;
+    border: none;
+    font-size: 17px;
+    width:200px;
+  }
+  .sidenav button[type=submit]{
+    float: left;
+    padding: 5px;
+    margin-top: 8px;
+    margin-right: 10px;
+    width: 30px;
+    background: #2196f3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  .sidenav button:hover{
+    background:rgb(144, 144, 144);
+  }
+/*Actual Content*/
+.paper-row {
+display: -ms-flexbox; /* IE10 */
+display: flex;
+width: 100%;
+-ms-flex-wrap: wrap; /* IE10 */
+flex-wrap: wrap;
+padding: 0 4px;
+}
+.paper-column {
+float: left;
+-ms-flex: 15; /* IE10 */
+flex: 15%;
+float: 1;
+max-width: 15%;
+padding: 10px 25px;
+}
+
+@media screen and (max-width: 650px) {
+.paper-column {
+  width: 100%;
+  display: block;
+}
+}
+
+.paper-card {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+max-width: 230px;
+max-height: 400px;
+margin: auto;
+text-align: center;
+font-family: arial;
+}
+
+.author {
+color: rgb(185, 180, 180);
+font-size: 18px;
+}
+
+.paper-card button {
+border: none;
+outline: 0;
+padding: 12px;
+color: white;
+background-color: rgb(74, 240, 24);
+text-align: center;
+cursor: pointer;
+width: 100%;
+font-size: 18px;
+}
+
+.paper-card button:hover {
+opacity: 0.7;
+}
+.icon-img{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+.paper-card a{
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="PDFpageStyle.css">
+</head>
+<body>
+<!--Side Menu Bar-->
+<div class="sidenav">
+    <input type="text" placeholder="Search..." name="search"/> 
+    <button type="submit"><i class="fa fa-search"></i></button>
+    <br><br><br>
+  <a href="index.jsp">Home</a>
+  <button class="dropdown-btn">Branch 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="COebook.html">Computer Engineering</a>
+    <a href="MEebook.html">Mechanical Engineering</a>
+    <a href="CEebook.html">Civil Engineering</a>
+    <a href="EEebook.html">Electrical Engineering</a>
+    <a href="EJebook.html">ENTC Engineering</a>
+    <a href="ISebook.html">Instrumentation Engineering</a>
+  </div>
+</div>
+<!--Actual Content-->
+<div class="main">
+<h1>Computer Engineering</h1> 
+    <div class="paper-row">
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="c.jpg" alt="C" style="width:100%;max-height: 200px;">
+                <h4>Programming in ANSI C</h4>
+                <p class="author">- E. Balagurusamy</p>
+                <p><button><a href="http://karadev.net/uroci/filespdf/files/Programming-in-ANSI-C.pdf" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+      
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="ds.jpg" alt="DS" style="width:100%;max-height: 190px;">
+                <h4>Data Structures</h4>
+                <p class="author">- Seymour Lipschutz</p>
+                <p><button><a href="https://www.mheducation.co.in/catalogsearch/result/?q=seymour+Lipschutz" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="dbms.jpg" alt="DBMS" style="width:100%;max-height: 190px;">
+                <h4>Database System Concepts</h4>
+                <p class="author">- Henry F. Korth</p>
+                <p><button><a href="http://www.niecdelhi.ac.in/uploads/Notes/btech/5sem/ece/DBMS_Korth_sol.pdf" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="se.jpg" alt="SE" style="width:100%;max-height: 190px;">
+                <h4>Software Engineering</h4>
+                <p class="author">- Roger S. Pressman</p>
+                <p><button><a href="http://dinus.ac.id/repository/docs/ajar/RPL-7th_ed_software_engineering_a_practitioners_approach_by_roger_s._pressman_.pdf" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="java.jpg" alt="Java" style="width:100%;max-height: 190px;">
+                <h4>Java -The Complete Reference</h4>
+                <p class="author">- Herbert Schildt</p>
+                <p><button><a href="http://iiti.ac.in/people/~tanimad/JavaTheCompleteReference.pdf" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+        
+    </div>  
+    <div class="paper-row">
+      <div class="paper-column">
+        <div class="paper-card">
+            <img src="oop.jpg" alt="C++" style="width:100%;max-height: 190px;">
+            <h4>Object Oriented Programming with C++</h4>
+            <p class="author">- E. Balagurusamy</p>
+            <p><button><a href="https://www.academia.edu/32323932/Balaguruswamy_Object_Oriented_Programming_With_C_Fourth_Edition.pdf?auto=download" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+          </div>
+    </div>
+
+    <div class="paper-column">
+      <div class="paper-card">
+          <img src="os.jpg" alt="OS" style="width:100%;max-height: 190px;">
+          <h4>Operating System Principles</h4>
+          <p class="author">- Peter Baer Galvin</p>
+          <p><button><a href="https://it325blog.files.wordpress.com/2012/09/operating-system-concepts-7-th-edition.pdf" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+        </div>
+  </div>
+
+  <div class="paper-column">
+    <div class="paper-card">
+        <img src="js.jpg" alt="C++" style="width:100%;max-height: 190px;">
+        <h4>Javascript Demystified</h4>
+        <p class="author">- Jim Keogh</p>
+        <p><button><a href="http://index-of.co.uk/Misc/Mcgraw-Hill%20-%20Javascript%20Demystified%20(2006).pdf" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+      </div>
+</div>
+    </div>
+
+</div>
+
+<script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
+    </script>
+</body>
+</html> 

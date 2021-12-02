@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="PDFpageStyle.css">
+</head>
+<body>
+<!--Side Menu Bar-->
+<div class="sidenav">
+    <input type="text" placeholder="Search..." name="search"/> 
+    <button type="submit"><i class="fa fa-search"></i></button>
+    <br><br><br>
+  <a href="index.jsp">Home</a>
+  <button class="dropdown-btn">Branch 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="COebook.html">Computer Engineering</a>
+    <a href="MEebook.html">Mechanical Engineering</a>
+    <a href="CEebook.html">Civil Engineering</a>
+    <a href="EEebook.html">Electrical Engineering</a>
+    <a href="EJebook.html">ENTC Engineering</a>
+    <a href="ISebook.html">Instrumentation Engineering</a>
+  </div>
+</div>
+<!--Actual Content-->
+<div class="main">
+<h1>Mechanical Engineering</h1> 
+    <div class="paper-row">
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="eme.jpg" alt="AME" style="width:100%;max-height: 200px;">
+                <h4>Engineering Mechanics</h4>
+                <p class="author">- Khurmi R.S</p>
+                <p><button><a href="https://enggsolution.co.in/DBATU/E-books%20and%20Notes/First%20Year/engineering-mechanics-rs-khurmi.pdf" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+      
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="sma.jpg" alt="SOM" style="width:100%;max-height: 190px;">
+                <h4>Strength of Materials</h4>
+                <p class="author">- Rattan R.S</p>
+                <p><button><a href="https://drive.google.com/file/d/1iaYGiGA4JiKCjR_y4QyybpyjGIdx4-IE/view" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="thermal.jpg" alt="TEN" style="width:100%;max-height: 190px;">
+                <h4>Thermal Engineering</h4>
+                <p class="author">- Rathore Mahesh M</p>
+                <p><button><a href="https://books.google.com.bd/books?id=hBl2IIcbLy0C&lpg=PP1&pg=PP1#v=onepage&q&f=true" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="tom.jpg" alt="TOM" style="width:100%;max-height: 190px;">
+                <h4>Theory of Machines</h4>
+                <p class="author">- Bevan Thomas</p>
+                <p><button><a href="https://books.google.co.in/books?id=yq0ucr-tCE0C&lpg=PP1&dq=theory%20of%20machines%20by%20thomas&pg=PP1#v=onepage&q=theory%20of%20machines%20by%20thomas&f=false" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+        <div class="paper-column">
+            <div class="paper-card">
+                <img src="fluid.jpg" alt="FMM" style="width:100%;max-height: 190px;">
+                <h4>Fluid Mechanics and Machinery</h4>
+                <p class="author">- R. Rudramoorthy </p>
+                <p><button><a href="https://drive.google.com/file/d/1W6cwk18NmwWTJy84ZfcVX7paDrYzC-n7/view" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+              </div>
+        </div>
+        
+    </div>  
+    <div class="paper-row">
+      <div class="paper-column">
+        <div class="paper-card">
+            <img src="powerP.jpg" alt="PER" style="width:100%;max-height: 190px;">
+            <h4>Power Plant Engineering</h4>
+            <p class="author">- Raja A.K</p>
+            <p><button><a href="academia.edu/8836636/Power_Plant_Engineering_By_A.K._Raja_Amit_Prakash_Srivastava_Manish_Dwived" download=""><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> View </a></button></p>
+          </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
+    </script>
+</body>
+</html> 
